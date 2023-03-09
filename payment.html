@@ -1,0 +1,103 @@
+<html>
+<head>
+<title>Bankpayment</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+<!--
+.style1 {color: #ff008f}
+-->
+</style>
+</head>
+<body>
+<form action="payment.php" method="post">
+<table width="604" border="0">
+
+<td width="182" bgcolor="#FFFFFF" class=catbox><font color=#FC245C><b>แจ้งชำระเงิน</b></b></font></td>
+</tr>
+
+
+<tr>
+<td>ชื่อ-นามสกุล <span class="style1">*</span></td>
+<td><input name="Name" type="text"></td>
+</tr>
+<tr>
+<td>เบอร์โทรศัพท์ <span class="style1">*</span></td>
+<td><input name="phone" type="text" id="phone"></td>
+</tr>
+<tr>
+<tr>
+<td>อีเมล์ <span class="style1">*</span></td>
+<td><input name="Email" type="text"></td>
+</tr>
+<tr>
+<td>จำนวนเงิน <span class="style1">*</span></td>
+<td><input name="total" type="text" id="total">
+บาท</td>
+</tr>
+
+
+<tr>
+<td width="34%" valign="top"><div align="center"> <strong> </strong> </div>
+
+<strong>
+ชำระเข้าธนาคาร </strong><font class="red style1">**</font></td>
+<td width="66%"><p>
+<input name="rdoBank" type="radio" value="REG" onClick="JavaScript:frmMain.hdnBank.value='กรุงศรี [131-1-00001-6]';">
+กรุงศรี [131-1-00001-6] <br>
+
+<input name="rdoBank" type="radio" value="REG" onClick="JavaScript:frmMain.hdnBank.value='กสิกรไทย [011-2-25379-3]';">
+กสิกรไทย [011-2-25379-3] <br>
+
+<input name="rdoBank" type="radio" value="REG" onClick="JavaScript:frmMain.hdnBank.value='ไทยพาณิชย์ [045-2-35809-1]';">
+ไทยพาณิชย์ [045-2-35809-1] 
+
+<input name="rdoBank" type="radio" value="REG" onClick="JavaScript:frmMain.hdnBank.value='กรุงไทย [023-1-19265-7]';">
+กรุงไทย [023-1-19265-7] <br>
+
+<input name="rdoBank" type="radio" value="REG" onClick="JavaScript:frmMain.hdnBank.value='กรุงเทพ [152-0-00001-7]';">
+กรุงเทพ [152-0-00001-7] <br>
+
+<input name="rdoBank" type="radio" value="REG" onClick="JavaScript:frmMain.hdnBank.value='ธีเอ็มบีธนาชาต [238-2-11007-6]';">
+ธีเอ็มบีธนาชาต [238-2-11007-6] <br>
+</p></td>
+</tr>
+
+
+<tr bgcolor="#F9F9F9">
+<td valign=top>วันที่ชำระเงิน <span class="style1">*</span></td><td><select name=txtdate>
+<option value="0" selected>0
+<option value="1">1
+<option value="2">2<option value="3">3<option value="4">4<option value="5">5<option value="6">6<option value="7">7<option value="8">8<option value="9">9<option value="10">10<option value="11">11<option value="12">12<option value="13">13<option value="14">14<option value="15">15<option value="16">16<option value="17">17<option value="18">18<option value="19">19<option value="20">20<option value="21">21<option value="22">22<option value="23">23<option value="24">24<option value="25">25<option value="26">26<option value="27">27<option value="28">28<option value="29">29<option value="30">30<option value="31">31</select> <select name=mm>
+<option value="0" selected>0
+<option value="1">1
+<option value="2">2<option value="3">3<option value="4">4<option value="5">5<option value="6">6<option value="7">7<option value="8">8<option value="9">9<option value="10">10<option value="11">11<option value="12">12</select> <select name=yy>
+<option value="2023">2023
+</select>
+</tr>
+
+
+<div class="col-sm-3">
+					<form  method="get">
+						<div class="form-group row">
+						<label for="cashmethod">เลือกวิธีชำระเงิน</label>
+						<select onchange="yesnoCheck(this);" class="form-control" name="cashmethod" required>
+							<option value="">-วิธีชำระเงิน-</option>
+							<option value="เงินสด">เงินสด</option>
+							<option value="โอนเงิน">โอนเงิน</option>
+					</div>
+
+
+<tr bgcolor="#F9F9F9"><td>รูป Slip [&#3617;&#3637;&#3627;&#3619;&#3639;&#3629;&#3652;&#3617;&#3656;&#3585;&#3655;&#3652;&#3604;&#3657;]</td><td><input type=file name=sem9><br><font class=small>(นามสกุลไฟล์ควรเป็น [ jpg , gif ] และขนาดไม่เกิน 100 Kb)</font></td></tr>
+
+
+<tr>
+<td>&nbsp;</td>
+<td><input type="submit" name="Submit" value="Submit"></td>
+</tr>
+</table>
+<br>
+<br>
+<br>
+</form>
+</body>
+</html>
